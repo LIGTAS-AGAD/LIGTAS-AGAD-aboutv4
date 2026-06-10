@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>LIGTAS-PORTAL v4</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIGTAS Landslide Hazard Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="https://raw.githubusercontent.com/Gabzrock/LIGTASAGADEWSV8.1-fallbackedition/refs/heads/main/MAINArtboard%201LIGTAS%20LOGO.png" alt="LIGTAS Logo" class="brand-logo">
+            <div class="nav-divider"></div>
+            <div class="header-title">
+                <span class="highlight-ltr">L</span>andslide <span class="highlight-ltr">I</span>nvestigations for <span class="highlight-ltr">G</span>eohazards Preparedness and <span class="highlight-ltr">T</span>imely <span class="highlight-ltr">A</span>dvisories in the Philippine<span class="highlight-ltr">s</span>:<br>
+                <span class="highlight-ltr">A</span>dvanced <span class="highlight-ltr">G</span>eospatial <span class="highlight-ltr">A</span>pproaches for <span class="highlight-ltr">D</span>RRM
+            </div>
+        </div>
+
+        <div class="nav-right-container">
+            <ul class="nav-links">
+                <li><a href="#about">About us</a></li>
+                <li><a href="#guidelines">Guidelines</a></li>
+                <li><a href="#monitoring">Monitoring</a></li>
+            </ul>
+            <div class="nav-right">
+                <img src="https://raw.githubusercontent.com/Gabzrock/LIGTASAGADEWSV8.1-fallbackedition/refs/heads/main/ligtas-agad%20partners%20logo%20(1).png" alt="LIGTAS AGAD Partners Logo" class="partners-logo">
+            </div>
+        </div>
+    </nav>
+
+    <!-- Parallax Hero -->
+    <section id="home" class="parallax bg-hero">
+        <div class="rock"></div>
+        <div class="rock"></div>
+        <div class="rock"></div>
+        <div class="rock"></div>
+        <div class="rock"></div>
+
+        <div class="content-box">
+            <h1>Geohazard Portal</h1>
+            <p>Community-based landslide monitoring and early warning system.</p>
+            <a href="#about" class="btn-main">View Hazard Map</a>
+        </div>
+
+        <div class="landslide-vector">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path class="vector-back" d="M0,0 L150,25 L300,20 L450,55 L600,45 L750,75 L900,60 L1050,90 L1200,80 L1200,120 L0,120 Z"></path>
+                <path class="vector-mid" d="M0,35 L120,50 L280,45 L420,80 L580,70 L720,100 L880,90 L1020,115 L1200,105 L1200,120 L0,120 Z"></path>
+                <path class="vector-front" d="M0,70 L180,80 L350,75 L500,105 L680,95 L850,115 L1000,110 L1200,120 L1200,120 L0,120 Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2>About LIGTAS</h2>
+        <p class="lead">LIGTAS AGAD is a specialized platform designed to provide real-time data on slope stability and rainfall intensity. By integrating community knowledge with advanced sensors, we reduce the risks associated with geohazards in vulnerable mountain regions.</p>
+        
+        <!-- STATIC TEAM & PARTNERS SECTION -->
+        <div class="team-partners-section">
+            <div class="static-card">
+                <h3>Our Team</h3>
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80" alt="LIGTAS Team Members" class="static-photo">
+            </div>
+            <div class="static-card">
+                <h3>Partner Agencies</h3>
+                <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1000&q=80" alt="Partner Agencies" class="static-photo">
+            </div>
+        </div>
+
+        <!-- INTERACTIVE PHOTO GALLERY W/ AUTOPLAY & FULLSCREEN CONTROLS -->
+        <div class="photo-gallery" id="gallery-wrapper">
+            <div class="main-view">
+                <!-- Native Fullscreen Button -->
+                <button id="fullscreen-btn" class="fullscreen-btn" title="Toggle Full Screen">&#x26F6;</button>
+                
+                <!-- On-Image Overlay Navigation Buttons -->
+                <button id="overlay-prev" class="img-nav-btn left-nav" title="Previous Image">&#10094;</button>
+                <button id="overlay-next" class="img-nav-btn right-nav" title="Next Image">&#10095;</button>
+
+                <img id="main-img" src="https://images.unsplash.com/photo-1542360663-8f40220bc2ab?auto=format&fit=crop&w=1000&q=80" alt="Monitoring Station">
+                <div class="photo-caption">
+                    <h3 id="main-title">Field Monitoring Station</h3>
+                    <p id="main-desc">Deep-earth sensors and tiltmeters deployed strategically to measure real-time ground displacement and subsurface moisture content.</p>
+                </div>
+            </div>
+
+            <!-- Autoplay Enable/Disable Toggle -->
+            <div class="autoplay-control">
+                <span id="autoplay-status">Autoplay: ON</span>
+                <label class="switch">
+                    <input type="checkbox" id="autoplay-toggle" checked>
+                    <span class="slider-toggle"></span>
+                </label>
+            </div>
+
+            <div class="thumbnail-slider">
+                <button id="slide-left" class="slider-btn" title="Previous Thumbnail Page">&#10094;</button>
+                
+                <div class="thumbnail-container" id="thumbnail-container">
+                    <img class="thumb active" src="https://images.unsplash.com/photo-1542360663-8f40220bc2ab?auto=format&fit=crop&w=800&q=80" data-title="Field Monitoring Station" data-desc="Deep-earth sensors and tiltmeters deployed strategically to measure real-time ground displacement and subsurface moisture content.">
+                    <img class="thumb" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" data-title="Vulnerable Mountain Terrain" data-desc="Geological mapping of steep slopes identified as highly susceptible to rain-induced shallow landslides.">
+                    <img class="thumb" src="https://images.unsplash.com/photo-1622384792610-18451fdbdc95?auto=format&fit=crop&w=800&q=80" data-title="Community DRRM Briefing" data-desc="Local government units and residents participating in risk reduction seminars to understand early warning protocols.">
+                    <img class="thumb" src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&w=800&q=80" data-title="Sensor Calibration" data-desc="Engineers calibrating telemetry equipment before field deployment to ensure accurate data transmission to the main servers.">
+                    <img class="thumb" src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=800&q=80" data-title="Aerial Photogrammetry" data-desc="Drone surveys mapping topography to create highly detailed 3D surface models for landslide susceptibility analysis.">
+                    <img class="thumb" src="https://images.unsplash.com/photo-1527482797697-8795b05a13fe?auto=format&fit=crop&w=800&q=80" data-title="Early Warning Infrastructure" data-desc="Automated siren towers installed in barangays that instantly sound an alarm when critical sensor thresholds are breached.">
+                    <img class="thumb" src="https://images.unsplash.com/photo-1561484930-998b6a7b22e8?auto=format&fit=crop&w=800&q=80" data-title="Localized Rain Gauges" data-desc="Automated weather instruments calculating precipitation intensity over a 24-hour period to anticipate soil saturation levels.">
+                    <img class="thumb" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" data-title="Data Command Center" data-desc="The central hub where geologists monitor real-time dashboards feeding live data from across multiple active fault zones.">
+                    <img class="thumb" src="https://images.unsplash.com/photo-1585012586737-f476251b52e3?auto=format&fit=crop&w=800&q=80" data-title="Evacuation Simulations" data-desc="Communities actively practicing safe routing and rapid deployment protocols during simulated weather crises.">
+                    <img class="thumb" src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&w=800&q=80" data-title="Post-Event Geologic Analysis" data-desc="Researchers examining scarps and soil composure following minor ground slips to improve future predictive modeling.">
+                </div>
+                
+                <button id="slide-right" class="slider-btn" title="Next Thumbnail Page">&#10095;</button>
+            </div>
+        </div>
+
+        <!-- ACCORDION MODULES SECTION -->
+        <div class="accordion-wrapper">
+            <h3>Explore LIGTAS Modules</h3>
+            <button class="accordion">1. Rainfall-Induced Landslide Early Warning System</button>
+            <div class="panel">
+                <div class="panel-content">
+                    <iframe class="iframe-container" src="https://gabzrock.github.io/Gabzrock-LIGTASAGADEWSV10/" allow="geolocation" loading="lazy"></iframe>
+                </div>
+            </div>
+            <button class="accordion">2. Landslide Database</button>
+            <div class="panel">
+                <div class="panel-content">
+                    <iframe class="iframe-container" src="https://gabzrock.github.io/LIGTAS-AGADLSDBV6/" allow="geolocation" loading="lazy"></iframe>
+                </div>
+            </div>
+            <button class="accordion">3. Landslide Hazard Forecast Monitoring</button>
+            <div class="panel">
+                <div class="panel-content">
+                    <iframe class="iframe-container" src="https://gabzrock.github.io/LIGTAS-AGAD-5dforecastapp/" allow="geolocation" loading="lazy"></iframe>
+                </div>
+            </div>
+            <button class="accordion">4. Social Media Page</button>
+            <div class="panel">
+                <div class="panel-content">
+                    <iframe class="iframe-container" src="https://www.facebook.com/projectligtasuplb" allow="geolocation" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety First & Emergency Guidelines -->
+    <section id="guidelines" class="section">
+        <h2>Safety First & Emergency Guidelines</h2>
+        <p class="lead">Awareness and preparation are your best defenses against landslide hazards. Familiarize yourself with these crucial safety steps to protect your family and community.</p>
+        
+        <div class="grid-container">
+            <div class="card">
+                <h3>Preparation (Before)</h3>
+                <ul>
+                    <li>Identify nearby landslide hazard zones.</li>
+                    <li>Develop a family evacuation plan and route.</li>
+                    <li>Assemble an emergency go-bag (food, water, first-aid).</li>
+                    <li>Listen to local weather forecasts and LIGTAS advisories.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Action (During)</h3>
+                <ul>
+                    <li>Stay alert and awake during heavy, continuous storms.</li>
+                    <li>Listen for unusual sounds like trees cracking or boulders knocking.</li>
+                    <li>Move away from the path of the landslide quickly.</li>
+                    <li>If escape is not possible, curl into a tight ball and protect your head.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Recovery (After)</h3>
+                <ul>
+                    <li>Stay away from the slide area; further danger may exist.</li>
+                    <li>Check for injured/trapped persons near the slide without entering it.</li>
+                    <li>Listen to local radio or authorities for emergency information.</li>
+                    <li>Report broken utility lines to appropriate authorities.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Monitoring & Alert Levels -->
+    <section id="monitoring" class="section">
+        <h2>⚠️ Monitoring & 🚨 Alert Levels</h2>
+        <p class="lead">Our sensors track ground movement and soil saturation in real-time. Understand what each alert level means for your immediate safety.</p>
+        
+        <div class="grid-container">
+            <div class="card alert-card alert-info">
+                <h3>Level 1: Advisory</h3>
+                <ul>
+                    <li><strong>Status:</strong> Normal to minor rainfall recorded.</li>
+                    <li><strong>Action:</strong> Continue normal activities. Stay updated with daily weather forecasts.</li>
+                </ul>
+            </div>
+            <div class="card alert-card alert-warning">
+                <h3>Level 2: Watch</h3>
+                <ul>
+                    <li><strong>Status:</strong> Continuous heavy rainfall. Soil saturation increasing.</li>
+                    <li><strong>Action:</strong> Prepare emergency kits. Be ready for possible evacuation. Monitor local alerts closely.</li>
+                </ul>
+            </div>
+            <div class="card alert-card alert-danger">
+                <h3>Level 3: Warning</h3>
+                <ul>
+                    <li><strong>Status:</strong> Critical sensor thresholds breached. Landslide is imminent or occurring.</li>
+                    <li><strong>Action:</strong> EVACUATE IMMEDIATELY to designated safe zones. Follow instructions from local DRRM officers.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Response Section -->
+    <section id="response" class="section">
+        <h2>🏥 Emergency Response</h2>
+        <div class="response-container">
+            <h3>Immediate Post-Disaster Protocol</h3>
+            <p>In the event of a confirmed landslide, local emergency responders and medical teams will be deployed. Do not attempt rescue operations in unstable terrain without specialized training. Direct all emergency requests to your local Barangay DRRM Council or call the national emergency hotline.</p>
+            <p><strong>Evacuation Centers:</strong> Ensure you proceed only to pre-approved structural evacuation centers identified during community drills. Temporary tents and medical triage will be set up at these coordinates.</p>
+        </div>
+    </section>
+
+    <!-- The Zoom Modal / Lightbox (Used for Gallery AND Static Photos) -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="zoomedImage">
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>About LIGTAS</h4>
+                <p>Advanced Geospatial Approaches for Disaster Risk Reduction and Management. Providing timely advisories to protect vulnerable Philippine communities.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">Hazard Portal</a></li>
+                    <li><a href="#guidelines">Safety Guidelines</a></li>
+                    <li><a href="#monitoring">Alert Levels</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p>Email: info.projectligtas@uplb.edu.ph</p>
+                <p>Location: UPLB, Los Baños, Laguna</p>
+                <p>Emergency Hotline: 911 / Local DRRMO</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 LIGTAS AGAD Project. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
